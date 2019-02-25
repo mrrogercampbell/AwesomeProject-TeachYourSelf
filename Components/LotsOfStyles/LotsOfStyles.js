@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
     red: {
         color: 'red',
-    },
+    }
 });
 
 export default class LotsOfStyles extends Component {
@@ -19,6 +19,7 @@ export default class LotsOfStyles extends Component {
                 <Text style={styles.red}>just red</Text>
                 <Text style={styles.bigBlue}>just bigBlue</Text>
                 <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
+                {/* This is cascading. Sense style.bigBlue is trailing it takes president over style.red. */}
                 <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
             </View>
         );
